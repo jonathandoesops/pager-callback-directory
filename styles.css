@@ -1,0 +1,339 @@
+/* General Reset */
+html, body {
+    touch-action: manipulation;
+    background: #E2D6EF;  /* Light muted lavender */
+    color: #333333;  /* Dark gray for readability */
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* Ensure full page can scroll */
+body {
+    overflow-y: auto;
+}
+
+/* Fullscreen Mobile Fix */
+html, body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Container Styling */
+.container {
+    width: 90%;
+    max-width: 450px;
+    margin: 30px auto;
+    background: #FFFFFF;
+    padding: 25px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* Header Text */
+h1 {
+    font-size: 22px;
+    color: #3D0075;
+}
+
+h2 {
+    font-size: 20px;
+    color: #5A268D;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Input Fields */
+input {
+    width: 90%;
+    padding: 12px;
+    font-size: 20px;
+    text-align: center;
+    margin: 15px 0;
+    border: 2px solid #A58BCC;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #3D0075;
+    outline: none;
+}
+
+input:focus {
+    border-color: #8360B9;
+}
+
+/* Dial Pad Styling */
+.dial-pad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    justify-content: center;
+    padding: 15px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.dial-pad button {
+    padding: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    background: #C2ABD0;
+    color: #3D0075;
+    border: 2px solid #A58BCC;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dial-pad button:hover {
+    background: #A58BCC;
+    border-color: #8360B9;
+    transform: scale(1.05);
+}
+
+.dial-pad button:active {
+    background: #8360B9;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Call and Clear Buttons */
+#callButton, #clearButton {
+    background: #C2ABD0;
+    color: #3D0075;
+    border: 2px solid #A58BCC;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#callButton:hover, #clearButton:hover {
+    background: #A58BCC;
+    transform: scale(1.05);
+}
+
+/* Phonebook List Styling */
+#phonebook-container {
+    text-align: left;
+    width: 100%;
+    display: none;
+    padding: 10px;
+}
+
+/* Ensure all phonebooks are formatted the same */
+#phonebookSection, #vaPhonebookSection, #luriePhonebookSection {
+    overflow-y: auto;
+    max-height: 75vh;
+    padding: 10px;
+    background: #FFFFFF;
+    border: 1px solid #A58BCC;
+    border-radius: 8px;
+}
+
+/* List Items for Phonebook */
+#phonebookSection ul, #vaPhonebookSection ul, #luriePhonebookSection ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Phonebook List Items */
+#phonebookSection li, #vaPhonebookSection li, #luriePhonebookSection li {
+    padding: 12px;
+    font-size: 18px;
+    border-bottom: 1px solid #C8B0DD;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Phonebook Links */
+#phonebookSection li a, #vaPhonebookSection li a, #luriePhonebookSection li a {
+    text-decoration: none;
+    color: #3D0075;
+    font-weight: normal;
+}
+
+#phonebookSection li a:hover, #vaPhonebookSection li a:hover, #luriePhonebookSection li a:hover {
+    color: #5A268D;
+}
+
+/* Scrollbar Styling */
+#phonebookSection::-webkit-scrollbar, #vaPhonebookSection::-webkit-scrollbar, #luriePhonebookSection::-webkit-scrollbar {
+    width: 6px;
+}
+
+#phonebookSection::-webkit-scrollbar-track, #vaPhonebookSection::-webkit-scrollbar-track, #luriePhonebookSection::-webkit-scrollbar-track {
+    background: #E2D6EF;
+    border-radius: 10px;
+}
+
+#phonebookSection::-webkit-scrollbar-thumb, #vaPhonebookSection::-webkit-scrollbar-thumb, #luriePhonebookSection::-webkit-scrollbar-thumb {
+    background: #A58BCC;
+    border-radius: 10px;
+}
+
+#phonebookSection::-webkit-scrollbar-thumb:hover, #vaPhonebookSection::-webkit-scrollbar-thumb:hover, #luriePhonebookSection::-webkit-scrollbar-thumb:hover {
+    background: #8360B9;
+}
+
+/* Three-way hospital selector */
+.mode-selector {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    width: 100%;
+    margin: 5px 0 20px;
+    padding: 4px;
+    background: #E2D6EF;
+    border: 1px solid #A58BCC;
+    border-radius: 10px;
+}
+
+.mode-option {
+    min-height: 44px;
+    padding: 10px 8px;
+    color: #5A268D;
+    border: 0;
+    border-radius: 7px;
+    background: transparent;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.mode-option.active {
+    color: #FFFFFF;
+    background: #3D0075;
+    box-shadow: 0 2px 6px rgba(61, 0, 117, 0.25);
+}
+
+.mode-option:focus-visible {
+    outline: 3px solid #8360B9;
+    outline-offset: 2px;
+}
+
+.va-mode .mode-selector {
+    background: #C0C0C0;
+    border-color: #FFFFFF;
+}
+
+.va-mode .mode-option {
+    color: #000080;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.va-mode .mode-option.active {
+    color: #FFFFFF;
+    background: #000080;
+}
+
+/* Original toggle styles retained for upstream compatibility */
+.toggle-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #3D0075;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* 🔹 VA MODE STYLING */
+.va-mode {
+    background: #000080 !important; /* Navy blue */
+    color: #FFFFFF !important;
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* VA Dialer */
+.va-mode #dialer-section {
+    background: #C0C0C0; /* Light gray */
+    border: 2px solid #000080;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* VA Dial Pad */
+.va-mode .dial-pad button {
+    background: #C0C0C0;
+    color: #000000;
+    border: 2px solid #000080;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.va-mode .dial-pad button:hover {
+    background: #A9A9A9;
+    border-color: #FFFFFF;
+}
+
+/* 🔹 VA MODE - Call & Delete Buttons */
+.va-mode #callButton, .va-mode #clearButton {
+    background: #C0C0C0 !important; /* Light gray */
+    color: #000000 !important; /* Black text */
+    border: 2px solid #000080 !important; /* Navy border */
+}
+
+.va-mode #callButton:hover, .va-mode #clearButton:hover {
+    background: #A9A9A9 !important; /* Slightly darker gray */
+    border-color: #FFFFFF !important;
+}
+
+/* Ensure mode label text is visible in VA mode */
+.va-mode #modeLabel {
+    color: #FFFFFF !important;
+    font-weight: bold;
+    font-size: 18px;
+}

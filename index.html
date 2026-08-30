@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>NMH Phonebook</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- 📌 Hospital Mode Selector -->
+        <div class="mode-selector" role="group" aria-label="Choose hospital">
+            <button type="button" class="mode-option active" data-mode="nmh" aria-pressed="true">NMH</button>
+            <button type="button" class="mode-option" data-mode="va" aria-pressed="false">VA</button>
+            <button type="button" class="mode-option" data-mode="lurie" aria-pressed="false">Lurie</button>
+        </div>
+
+        <!-- 📌 Phonebook Button -->
+        <button id="phonebookButton">Go to NMH Phonebook</button>
+
+        <!-- 📌 NMH Phone Dialer Section -->
+        <section id="dialer-section">
+            <input type="text" id="phoneNumber" placeholder="Enter number" readonly>
+            <div class="dial-pad">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button id="callButton">📞 Call</button>
+                <button>0</button>
+                <button id="clearButton">⌫</button>
+            </div>
+        </section>
+
+        <!-- 📌 Phonebook Sections -->
+        <section id="phonebook-container" style="display: none;">
+            
+            <!-- 📌 NMH Phonebook -->
+            <section id="phonebookSection">
+                <h1>NMH Phonebook</h1>
+<ul>
+<ul> <li><strong>Cardiac Arrest/RRT/Stroke:</strong> <a href="tel:3126955555">312-695-5555</a></li> <li><strong>IT Helpdesk:</strong> <a href="tel:3129264357">312-926-4357</a></li> <li><strong>NMFF Clinic Scheduler:</strong> <a href="tel:3126958630">312-695-8630</a></li> <li><strong>Bed Assignment:</strong> <a href="tel:3129262051">312-926-2051 (opt 1)</a></li> <li><strong>PTC:</strong> <a href="tel:3129267647">312-926-7647</a></li> <li><strong>External Transfer:</strong> <a href="tel:3129263321">312-926-3321 (opt 2)</a></li> <li><strong>Long-Distance:</strong> <a href="tel:3126952256">312-695-2256</a></li> <li><strong>Physician Referral Services:</strong> <a href="tel:3129268400">312-926-8400</a></li> </ul>
+
+<ul>
+    <li><strong>MICU CC:</strong> <a href="tel:3129265127">312-926-5127</a></li>
+    <li><strong>MICU Galter:</strong> <a href="tel:3124725140">312-472-5140</a></li>
+    <li><strong>MICU Fax:</strong> <a href="tel:3129268683">312-926-8683</a></li>
+    <li><strong>Feinberg:</strong> <a href="tel:3126949720">312-694-9720</a></li>
+    <li><strong>CCU:</strong> <a href="tel:3126942700">312-694-2700</a></li>
+    <li><strong>CCU CC:</strong> <a href="tel:3129265673">312-926-5673</a></li>
+    <li><strong>CCU Fax:</strong> <a href="tel:3126947786">312-694-7786</a></li>
+    <li><strong>11E:</strong> <a href="tel:3129262365">312-926-2365</a></li>
+    <li><strong>11E CC:</strong> <a href="tel:3129268095">312-926-8095</a></li>
+    <li><strong>11E Fax:</strong> <a href="tel:3129268119">312-926-8119</a></li>
+    <li><strong>11W:</strong> <a href="tel:3129262351">312-926-2351</a></li>
+    <li><strong>11W CC:</strong> <a href="tel:3124725211">312-472-5211</a></li>
+    <li><strong>11W Fax:</strong> <a href="tel:3126950571">312-695-0571</a></li>
+    <li><strong>13E:</strong> <a href="tel:3129262356">312-926-2356</a></li>
+    <li><strong>13E CC:</strong> <a href="tel:3129269671">312-926-9671</a></li>
+    <li><strong>13E Fax:</strong> <a href="tel:3129260968">312-926-0968</a></li>
+    <li><strong>13W:</strong> <a href="tel:3129262381">312-926-2381</a></li>
+    <li><strong>13W CC:</strong> <a href="tel:3129268109">312-926-8109</a></li>
+    <li><strong>13WFax:</strong> <a href="tel:3129266299">312-926-6299</a></li>
+    <li><strong>14E:</strong> <a href="tel:3129262853">312-926-2853</a></li>
+    <li><strong>14E CC:</strong> <a href="tel:3129260166">312-926-0166</a></li>
+    <li><strong>14E Fax:</strong> <a href="tel:3129262041">312-926-2041</a></li>
+        <li><strong>Prentice 14 North:</strong> <a href="tel:3124721410">312-472-1410</a></li>
+        <li><strong>Prentice 14 South:</strong> <a href="tel:3124721420">312-472-1420</a></li>
+        <li><strong>Prentice 14 CC:</strong> <a href="tel:3124721407">312-472-1407</a></li>
+        <li><strong>Prentice 15 North:</strong> <a href="tel:3124721510">312-472-1510</a></li>
+        <li><strong>Prentice 15 South:</strong> <a href="tel:3124721520">312-472-1520</a></li>
+            <li><strong>Prentice 15 CC:</strong> <a href="tel:3124721507">312-472-1507</a></li>
+            <li><strong>Prentice 16 North:</strong> <a href="tel:3124721610">312-472-1610</a></li>
+        <li><strong>Prentice 16 South:</strong> <a href="tel:3124721620">312-472-1620</a></li>
+            <li><strong>Prentice 16 CC:</strong> <a href="tel:3124721607">312-472-1607</a></li>
+    <li><strong>Dialysis 9 Flr:</strong> <a href="tel:3129261696">312-926-1696</a></li>
+    <li><strong>ED 1 Flr:</strong> <a href="tel:3129266222">312-926-6222</a></li>
+    <li><strong>CC:</strong> <a href="tel:3129269743">312-926-9743</a></li>
+    <li><strong>ED Mezz:</strong> <a href="tel:3129264881">312-926-4881</a></li>
+    <li><strong>FMOU:</strong> <a href="tel:3129261095">312-926-1095</a></li>
+    <li><strong>CT ICU:</strong> <a href="tel:3129265123">312-926-5123</a></li>
+    <li><strong>SICU, 8SE:</strong> <a href="tel:3129265186">312-926-5186</a></li>
+</ul>
+<ul>
+    <li><strong>Outpatient – Walgreen’s:</strong> <a href="tel:3129511084">312-951-1084</a></li>
+    <li><strong>Fax:</strong> <a href="tel:3129511227">312-951-1227</a></li>
+    <li><strong>Inpatient Pharmacy:</strong> <a href="tel:3129265147">312-926-5147</a></li>
+    <li><strong>MICU:</strong> <a href="tel:3129261895">312-926-1895</a></li>
+    <li><strong>Prentice:</strong> <a href="tel:3124723790">312-472-3790</a></li>
+    <li><strong>ALD:</strong> pager 15720</li>
+</ul>
+<ul>
+    <li><strong>Specimen Receiving 7 Flr:</strong> <a href="tel:3129267970">312-926-7970</a></li>
+    <li><strong>ABG 8 Flr:</strong> <a href="tel:3129265174">312-926-5174</a></li>
+    <li><strong>Autopsy Olson:</strong> <a href="tel:3129263212">312-926-3212</a></li>
+    <li><strong>Blood Bank 7 Flr:</strong> <a href="tel:3129262513">312-926-2513</a></li>
+    <li><strong>Chemistry 7 Flr:</strong> <a href="tel:3129267536">312-926-7536</a></li>
+    <li><strong>Flow Cytometry 7 Flr:</strong> <a href="tel:3129267360">312-926-7360</a></li>
+    <li><strong>Heme/Cell Count 7 Flr:</strong> <a href="tel:3129263200">312-926-3200</a></li>
+    <li><strong>Hemostasis 7 Flr:</strong> <a href="tel:3129262428">312-926-2428</a></li>
+    <li><strong>Micro 7 Flr:</strong> <a href="tel:3129263202">312-926-3202</a></li>
+    <li><strong>Molecular 7 Flr:</strong> <a href="tel:3129264384">312-926-4384</a></li>
+    <li><strong>Pathology 7 Flr:</strong> <a href="tel:3129263211">312-926-3211</a></li>
+    <li><strong>BmBx 7 Flr:</strong> <a href="tel:3129268501">312-926-8501</a></li>
+    <li><strong>Send-out 7 Flr:</strong> <a href="tel:3129261200">312-926-1200</a></li>
+    <li><strong>Biofire:</strong> pager 59285</li>
+</ul>
+<ul>
+    <li><strong>After Hours Reading 1 Flr:</strong> <a href="tel:3129267038">312-926-7038</a></li>
+    <li><strong>General Radiology (IP Desk):</strong> <a href="tel:3129265105">312-926-5105</a></li>
+    <li><strong>CT Order/Protocol 4 Flr:</strong> <a href="tel:3129265314">312-926-5314</a></li>
+    <li><strong>CT ED:</strong> <a href="tel:3129268724">312-926-8724</a></li>
+    <li><strong>CT Body Reading 4 Flr:</strong> <a href="tel:3129265894">312-926-5894</a></li>
+    <li><strong>Chest Reading 4 Flr:</strong> <a href="tel:3129265204">312-926-5204</a></li>
+    <li><strong>MSK Reading:</strong> <a href="tel:3124725977">312-472-5977</a></li>
+    <li><strong>ENT/Neuro Reading:</strong> <a href="tel:3129262042">312-926-2042</a></li>
+    <li><strong>MRI Order/Protocol 3 Arkes:</strong> <a href="tel:3129264333">312-926-4333</a></li>
+    <li><strong>Fax:</strong> <a href="tel:3129266452">312-926-6452</a></li>
+    <li><strong>Prentice MR:</strong> <a href="tel:3124720556">312-472-0556</a> / <a href="tel:3124720557">312-472-0557</a></li>
+    <li><strong>Body Reading 3 Arkes:</strong> <a href="tel:3129261810">312-926-1810</a></li>
+    <li><strong>Cardiac Reading:</strong> <a href="tel:3129261838">312-926-1838</a></li>
+    <li><strong>Neuro Reading:</strong> <a href="tel:3129264408">312-926-4408</a> / <a href="tel:3129264407">312-926-4407</a></li>
+    <li><strong>PET CT:</strong> <a href="tel:3129263762">312-926-3762</a></li>
+    <li><strong>Interventional Radiology 4 Flr:</strong> <a href="tel:3129265200">312-926-5200</a></li>
+    <li><strong>Nuclear 4 Flr:</strong> <a href="tel:3129262340">312-926-2340</a></li>
+    <li><strong>Ultrasound Ordering 4 Flr:</strong> <a href="tel:3129267032">312-926-7032</a></li>
+    <li><strong>Ultrasound Reading 4 Flr:</strong> <a href="tel:3129262761">312-926-2761</a></li>
+    <li><strong>OB/GYN US:</strong> <a href="tel:3124724156">312-472-4156</a></li>
+    <li><strong>Duplex US (Vascular):</strong> <a href="tel:3129265809">312-926-5809</a></li>
+</ul>
+<ul>
+    <li><strong>Anesthesia Coordinator:</strong> <a href="tel:3129269036">312-926-9036</a></li>
+    <li><strong>Cardiac Cath - General 8 Flr:</strong> <a href="tel:3129265135">312-926-5135</a></li>
+    <li><strong>Back Line:</strong> <a href="tel:3129265176">312-926-5176</a></li>
+    <li><strong>Cardiac Nuc Stress 8 Flr:</strong> <a href="tel:3129267486">312-926-7486</a></li>
+    <li><strong>Central Tele:</strong> <a href="tel:3129268356">312-926-8356</a></li>
+    <li><strong>Coumadin Clinic (BCVI):</strong> <a href="tel:3126954965">312-695-4965</a></li>
+    <li><strong>Fax:</strong> <a href="tel:3129263798">312-926-3798</a></li>
+    <li><strong>Echo (rest/stress) 8 Flr:</strong> <a href="tel:3129262629">312-926-2629</a></li>
+    <li><strong>EP Lab:</strong> <a href="tel:3129268768">312-926-8768</a></li>
+    <li><strong>Holter:</strong> ***</li>
+    <li><strong>Respiratory:</strong> Pager "resp"</li>
+    <li><strong>PFT Lab:</strong> <a href="tel:3129264194">312-926-4194</a></li>
+    <li><strong>PT:</strong> Floor-specific</li>
+    <li><strong>PT Weekends if urgent:</strong> Pager 5-7685</li>
+    <li><strong>Medicar (Superior):</strong> <a href="tel:3129265988">312-926-5988</a></li>
+    <li><strong>RIC (PM&R consult):</strong> <a href="tel:3122381058">312-238-1058</a></li>
+    <li><strong>Ballert:</strong> <a href="tel:3127874400">312-787-4400</a></li>
+    <li><strong>Courier:</strong> <a href="tel:8558445227">855-844-5227</a></li>
+    <li><strong>Weekend SW if urgent:</strong> Pager 5-3025</li>
+    <li><strong>Environmental Svcs:</strong> Pager 5-7271</li>
+    <li><strong>Maintenance:</strong> <a href="tel:3129268888">312-926-8888</a></li>
+    <li><strong>Medical Records:</strong> <a href="tel:3129263376">312-926-3376</a></li>
+    <li><strong>Imaging Disk Request:</strong> ***</li>
+</ul>
+<ul>
+    <li><strong>Windows Room:</strong> <a href="tel:3129266691">312-926-6691</a></li>
+    <li><strong>Small Windows:</strong> ***</li>
+    <li><strong>Clarke:</strong> ***</li>
+    <li><strong>13W:</strong> ***</li>
+    <li><strong>Clarke Closet:</strong> ***</li>
+    <li><strong>11E:</strong> ***</li>
+    <li><strong>11W:</strong> ***</li>
+    <li><strong>MICU 1:</strong> ***</li>
+    <li><strong>MICU 2:</strong> ***</li>
+    <li><strong>CCU:</strong> ***</li>
+    <li><strong>Gen Cardiology:</strong> ***</li>
+    <li><strong>Hepatology:</strong> ***</li>
+    <li><strong>Red (Mobile):</strong> <a href="tel:3124722627">312-472-2627</a></li>
+    <li><strong>Red (Desk):</strong> <a href="tel:3126952492">312-695-2492</a></li>
+    <li><strong>Green (Mobile):</strong> <a href="tel:3124722649">312-472-2649</a></li>
+    <li><strong>Green (Desk):</strong> <a href="tel:3129264527">312-926-4527</a></li>
+</ul>
+
+</ul>
+            </section>
+
+            <!-- 📌 VA Phonebook -->
+            <section id="vaPhonebookSection" style="display: none;">
+                <h1>VA Phonebook</h1>
+                <ul>
+                    <li><strong>JBVAMC Test 1:</strong> <a href="tel:3125698387">312-569-8387</a></li>
+                    <li><strong>JBVAMC Test 2:</strong> <a href="tel:3125698387">312-569-8387</a></li>
+                </ul>
+            </section>
+
+            <!-- 📌 Lurie Phonebook -->
+            <section id="luriePhonebookSection" style="display: none;">
+                <h1>Lurie Phonebook</h1>
+                <ul>
+                    <li><strong>Callback format:</strong> <span>7-XXXX → 312-227-XXXX</span></li>
+                </ul>
+            </section>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
